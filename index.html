@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Group Fitness Timetable</title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+    html, body {
+      background: #000;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .avoid-break {
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    @media print {
+      .no-print { display: none !important; }
+      .page { box-shadow: none !important; border-radius: 0 !important; }
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-black p-6">
+  <div class="max-w-5xl mx-auto">
+    <!-- Toolbar (hidden when printing) -->
+    <div class="no-print mb-4 flex items-center justify-between text-white">
+      <div class="text-sm opacity-70">Hosted version for clean printing (A4, no chat UI)</div>
+      <button onclick="window.print()" class="px-3 py-2 rounded-lg bg-white/10 hover:bg-white/20 transition">
+        Print
+      </button>
+    </div>
+
+    <div class="page relative rounded-2xl shadow-sm">
+      <!-- Header -->
+      <header class="p-6 border-b border-white/20">
+        <div class="flex items-center justify-start gap-4">
+          <div class="text-4xl font-extrabold tracking-tight text-white">Group Fitness Timetable</div>
+        </div>
+      </header>
+
+      <!-- Body -->
+      <main class="p-6">
+        <div class="grid grid-cols-[140px_1fr_1fr] gap-x-4 gap-y-4 text-white">
+          <div class="text-xl uppercase tracking-wider font-extrabold mb-2 pl-4">Day</div>
+          <div class="text-xl uppercase tracking-wider font-extrabold mb-2 pl-4">Morning</div>
+          <div class="text-xl uppercase tracking-wider font-extrabold mb-2 pl-[6px]">Afternoon</div>
+
+
+          <!-- Monday -->
+          <div class="col-span-3 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Monday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Sweat</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:15 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Body Blast</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">10:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave X</span>
+      </div>
+
+              </div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">4:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">CaveFit</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">5:15 PM</span>
+        <span class="text-neutral-800 font-medium truncate">Functional Mechanics</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">Body Confidence (Ladies Only)</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Tuesday -->
+          <div class="col-span-3 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Tuesday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Barbell Fitness</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:15 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Abs & Booty</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">10:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Strong</span>
+      </div>
+
+              </div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">4:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">CaveFit</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">5:15 PM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Sweat</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Wednesday -->
+          <div class="col-span-3 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Wednesday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Strong</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:15 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Power</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">10:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Sweat</span>
+      </div>
+
+              </div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">4:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">CaveFit</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">5:15 PM</span>
+        <span class="text-neutral-800 font-medium truncate">HIIT Boxing</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Thursday -->
+          <div class="col-span-3 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Thursday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Abs & Booty</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:15 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave HIIT</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">10:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Bums & Guns</span>
+      </div>
+
+              </div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">4:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">CaveFit</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">5:15 PM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave HIIT</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">Barbell Fitness</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Friday -->
+          <div class="col-span-3 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Friday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">6:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Power</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:15 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Sweat</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">10:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Body Sculpt</span>
+      </div>
+
+              </div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">4:00 PM</span>
+        <span class="text-neutral-800 font-medium truncate">CaveFit</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">5:15 PM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Sweat</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Saturday (cropped blue: Day + Morning) -->
+          <div class="col-span-2 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Saturday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">8:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Boot Camp</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Boot Camp</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 space-y-2 pl-4 avoid-break">
+
+          </div>
+
+
+          <!-- Sunday (cropped blue: Day + Morning) -->
+          <div class="col-span-2 rounded-2xl bg-[#38b6ff] p-4 avoid-break">
+            <div class="grid grid-cols-[140px_1fr] gap-x-4 gap-y-2">
+              <div class="text-2xl font-extrabold text-white pt-1">Sunday</div>
+              <div class="space-y-2">
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">8:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">Cave Strength – Upper Body</span>
+      </div>
+
+      <div class="h-12 bg-white border border-[#e5e7eb] rounded-xl px-3 py-2 grid grid-cols-[var(--time-col)_1fr] items-center gap-x-2" style="--time-col: 90px;">
+        <span class="text-neutral-800 whitespace-nowrap">9:00 AM</span>
+        <span class="text-neutral-800 font-medium truncate">CaveFit</span>
+      </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-span-1 space-y-2 pl-4 avoid-break">
+
+          </div>
+
+        </div>
+      </main>
+
+      <!-- Footer / Notes -->
+      <footer class="p-6 border-t border-white/20">
+        <div class="text-xs text-neutral-400 leading-relaxed">
+          Notes: Class times, instructors, capacities and booking policies are subject to change. Please arrive 5 minutes early. Bring a towel and water bottle. Cancel if you can’t attend.
+        </div>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
